@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Intern Task</title>
+</head>
+<body>
+  <form id="submit-form" method="POST" action="/submit">
+
+    <!-- name -->
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" required minlength="5">
+      <span id="name-error" class="error"></span>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for = "email">Email: </label>
+      <input type="text" id="email" name="email" required>
+      <span id="email-error" class="error"></span>
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for = "phone">phone: </label>
+      <input type="text" id="phone" name="phone" required pattern = "[0-9]+">
+      <span id="phone-error" class="error"></span>   
+    </div>
+
+    <!-- Gender -->
+    <div>
+      <label for="gender">Gender: </label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for ="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="radio" id="others" name="gender" value="others" required>
+      <label for="others">Others</label>
+      <span id="gender-error" class="error"></span>
+    </div>
+
+    <!-- Hobbies -->
+          <div>
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" id="reading" name="hobbies[]" value="reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="traveling" name="hobbies[]" value="traveling">
+        <label for="traveling">Traveling</label>
+        <input type="checkbox" id="music" name="hobbies[]" value="music">
+        <label for="music">Listening to music</label>
+        <span id="hobbies-error" class="error"></span>
+      </div>
+      <div>
+        <button type="submit" id="submit-button">Submit</button>
+      </div>
+
+  </form>
+</body>
+</html>
